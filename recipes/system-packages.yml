@@ -8,15 +8,17 @@ modules:
 
   - type: dnf
     repos:
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
       cleanup: true
       copr:
         - scottames/ghostty
         - g3tchoo/prismlauncher
     install:
+      skip-unavailable: true
       packages:
         - ghostty
         - steam
-        - adw-gtk3-theme
         - nautilus-python
         - prismlauncher
 
