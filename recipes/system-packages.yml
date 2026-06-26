@@ -1,0 +1,39 @@
+# This file manages all that has to do with system packages and modules
+
+modules:
+
+  - type: bling
+    install:
+      - rpmfusion
+
+  - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - scottames/ghostty
+        - g3tchoo/prismlauncher
+    install:
+      packages:
+        - ghostty
+        - steam
+        - adw-gtk3-theme
+        - nautilus-python
+        - prismlauncher
+
+    remove:
+      auto-remove: true
+      packages:
+        - firefox
+        - firefox-langpacks
+        - gnome-shell-extension-background-logo
+        - gnome-shell-extension-apps-menu
+        - gnome-shell-extension-launch-new-instance
+        - gnome-shell-extension-window-list
+        - gnome-shell-extension-places-menu
+        - ptyxis
+        - nvtop
+        - gnome-system-monitor
+        - gnome-tour
+        - dconf-editor
+        - htop
+        - gnome-extensions-app
