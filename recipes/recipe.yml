@@ -1,17 +1,50 @@
 name: fivek
-description: custom made linux distro for me.
+description: uBlue based custom os for me.
 
 base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia-open
 image-version: latest
 
 modules:
-
+  
   - type: os-release
     properties:
       NAME: 5K
-      PRETTY_NAME: 5K 
-      DEFAULT-HOSTNAME: 5k
+      PRETTY_NAME: 5K
+      HOME_URL: https://github.com/PolyCatDev/sennia-linux
+      DEFAULT_HOSTNAME: 5k
 
   - type: script
     scripts:
       - remove-default-bg.sh
+
+  - type: gnome-extensions
+    install:
+      - 517 
+      - 3193
+      
+  - type: brew
+    brew-analytics: false
+    auto-update: false
+    auto-upgrade: false
+    nofile-limits: false
+
+  - type: default-flatpaks
+    configurations:
+      - notify: false
+        scope: user
+        install:
+          - io.bassi.Amberol
+          - com.mattjakeman.ExtensionManager
+          - io.missioncenter.MissionCenter
+          - org.vinegarhq.Sober
+          - page.tesk.Refine
+
+  - from-file: system-packages.yml
+
+  - type: files
+    files:
+      - source: system
+        destination: /
+  - type: initramfs
+
+  - type: signing 
