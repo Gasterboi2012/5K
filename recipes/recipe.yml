@@ -10,7 +10,7 @@ modules:
     properties:
       NAME: 5K
       PRETTY_NAME: 5K
-      HOME_URL: https://github.com/PolyCatDev/sennia-linux
+      HOME_URL: https://github.com/gasterboi2012/5K
       DEFAULT_HOSTNAME: 5k
 
   - type: script
