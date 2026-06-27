@@ -1,5 +1,6 @@
 name: fivek
-description: uBlue based custom os for me.
+description: uBlue-based custom OS for personal use.
+version: 0.1.0
 
 base-image: ghcr.io/blue-build/base-images/fedora-silverblue-nvidia-open
 image-version: latest
@@ -10,7 +11,7 @@ modules:
     properties:
       NAME: 5K
       PRETTY_NAME: 5K
-      HOME_URL: https://github.com/gasterboi2012/5K
+      HOME_URL: https://github.com/Gasterboi2012/5K
       DEFAULT_HOSTNAME: 5k
 
   - type: script
@@ -19,7 +20,7 @@ modules:
 
   - type: gnome-extensions
     install:
-      - 517 
+      - 517
       - 3193
       
   - type: brew
@@ -33,8 +34,8 @@ modules:
       - notify: false
         scope: user
         install:
-          - io.bassi.Amberol
           - com.mattjakeman.ExtensionManager
+          - io.bassi.Amberol
           - io.missioncenter.MissionCenter
           - org.vinegarhq.Sober
           - page.tesk.Refine
@@ -45,6 +46,7 @@ modules:
     files:
       - source: system
         destination: /
+
   - type: initramfs
 
-  - type: signing 
+  - type: signing
