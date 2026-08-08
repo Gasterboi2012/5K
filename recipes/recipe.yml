@@ -28,7 +28,6 @@ modules:
         - install-weak-deps: false
           packages:
             - helium-bin
-            - https://vencord.dev/download/vesktop/amd64/rpm
     remove:
       packages:
         - firefox
