@@ -33,8 +33,6 @@ modules:
           packages:
             - helium-bin
             - https://vencord.dev/download/vesktop/amd64/rpm
-            - steam
-            - kernel-modules-extra
     remove:
       packages:
         - firefox
