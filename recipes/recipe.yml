@@ -21,23 +21,27 @@ modules:
   - type: dnf
     repos:
       copr:
-        - atim/starship
+        - imput/helium
     install:
       packages:
-        - micro
-        - starship
+        - install-weak-deps: false
+          packages:
+            - helium-bin
+            - https://vencord.dev/download/vesktop/amd64/rpm
+            - steam
+            - kernel-modules-extra
     remove:
       packages:
         - firefox
         - firefox-langpacks 
+        - khelpcenter
 
   - type: default-flatpaks
     configurations:
-      - notify: true
+      - notify: false
         scope: system
         install: 
-          - org.mozilla.firefox
-          - org.gnome.Loupe
+          - org.vinegarhq.Sober
       - scope: user 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
