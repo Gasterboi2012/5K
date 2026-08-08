@@ -7,6 +7,11 @@ base-image: ghcr.io/blue-build/base-images/fedora-kinoite-nvidia-open
 image-version: latest
 
 modules:
+
+  - type: bling
+    install:
+        - rpmfusion
+      
   - type: os-release
     properties:
       ID: fivek
