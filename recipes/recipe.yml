@@ -1,12 +1,18 @@
 ---
 
 name: 5K
-description: This is my personal OS image.
+description: Personal Atomic Image
 
 base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 
 modules:
+  - type: os-release
+    properties:
+      ID: fivek
+      NAME: 5k
+      PRETTY_NAME: 5K
+  
   - type: files
     files:
       - source: system
