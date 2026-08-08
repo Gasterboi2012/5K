@@ -1,6 +1,6 @@
 ---
 
-name: 5K
+name: fivek
 description: Personal Atomic Image
 
 base-image: ghcr.io/ublue-os/silverblue-main
