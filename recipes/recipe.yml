@@ -3,7 +3,7 @@
 name: fivek
 description: Personal Atomic Image
 
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite-nvidia-open
 image-version: latest
 
 modules:
