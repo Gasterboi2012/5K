@@ -8,10 +8,6 @@ image-version: latest
 
 modules:
 
-  - type: bling
-    install:
-        - rpmfusion
-      
   - type: os-release
     properties:
       ID: fivek
